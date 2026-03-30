@@ -22,12 +22,12 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 z-50 w-full bg-[#1F4427] border-b border-white/10 self-stretch">
-      <div className="mx-auto w-full px-[70px] py-[10px]">
+      <div className="mx-auto w-full px-6 md:px-[70px] py-[10px]">
         <div className="flex h-14 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo.svg"
+                src="/logos/logo.svg"
                 alt="EJF Logo"
                 width={80}
                 height={80}

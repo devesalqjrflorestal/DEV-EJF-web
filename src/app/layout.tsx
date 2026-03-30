@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "ESALQ Júnior Florestal | Consultoria e Soluções Florestais",
   description: "A ESALQ Júnior Florestal é uma empresa júnior focada na excelência em consultoria florestal, manejo e soluções ambientais sustentáveis.",
   icons: {
-    icon: "/logo.svg",
+    icon: "/logos/logo.svg",
   },
 };
 

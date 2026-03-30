@@ -12,8 +12,8 @@ export default function Home() {
     <main className="flex flex-col">
       {/* Hero Section */}
       <section
-        className="relative flex h-[714px] w-full flex-col justify-center items-center md:items-start bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('/hero-bg.png')" }}
+        className="relative flex min-h-[500px] md:h-[714px] w-full flex-col justify-center items-center md:items-start bg-cover bg-center bg-no-repeat overflow-hidden py-20 md:py-0"
+        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('/banners/hero-bg.png')" }}
       >
         <div className="relative z-10 w-full px-6 md:px-[122px] text-center md:text-left">
           <div className="max-w-none">
@@ -45,11 +45,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 flex w-full justify-center md:justify-start md:px-[122px]">
+        <div className="relative z-10 flex w-full justify-center px-4 md:justify-start md:px-[122px]">
           <Link
             href="/solucoes"
             className={cn(
-              "rounded-full bg-white px-10 py-4 text-[16px] md:text-[18px] font-semibold text-[#0b2e22] shadow-[0_10px_20px_rgba(0,0,0,0.2)] hover:bg-neutral-100 transition-all hover:scale-105 active:scale-95 uppercase tracking-wider",
+              "whitespace-nowrap inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-[13px] sm:px-8 sm:text-[15px] md:px-10 md:py-4 md:text-[18px] font-semibold text-[#0b2e22] shadow-[0_10px_20px_rgba(0,0,0,0.2)] hover:bg-neutral-100 transition-all active:scale-95 uppercase tracking-wider",
               montserrat.className
             )}
           >
@@ -69,7 +69,7 @@ export default function Home() {
             href: "/solucoes/legislacao",
             borderColor: "#F1DD8C",
             icon: TreeDeciduous,
-            image: "/legislacao.jpg"
+            image: "/solucoes/legislacao.jpg"
           },
           {
             title: "MANEJO FLORESTAL",
@@ -77,7 +77,7 @@ export default function Home() {
             href: "/solucoes/manejo",
             borderColor: "#8CC5A2",
             icon: Leaf,
-            image: "/manejo.jpg"
+            image: "/solucoes/manejo.jpg"
           },
           {
             title: "CONSULTORIA",
@@ -85,7 +85,7 @@ export default function Home() {
             href: "/solucoes/consultoria",
             borderColor: "#8CC5A2",
             icon: FileText,
-            image: "/consultoria.jpg"
+            image: "/solucoes/consultoria.jpg"
           },
           {
             title: "ENSINO",
@@ -93,7 +93,7 @@ export default function Home() {
             href: "/solucoes/ensino",
             borderColor: "#1C8F42",
             icon: BookOpen,
-            image: "/ensino.jpeg"
+            image: "/solucoes/ensino.jpeg"
           }
         ].map((service, idx) => {
           const IconComponent = service.icon;
@@ -109,16 +109,16 @@ export default function Home() {
             >
               {/* Header Image */}
               <div className="relative h-48 w-full overflow-hidden">
-                <Image 
-                  src={service.image || "/hero-bg.png"} 
+                <Image
+                  src={service.image || "/banners/hero-bg.png"}
                   alt={service.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1F4427] to-transparent opacity-60" />
-                
+
                 {/* Icon Overlay */}
-                <div 
+                <div
                   className="absolute bottom-4 left-6 p-2.5 rounded-xl border backdrop-blur-md bg-black/10"
                   style={{ borderColor: service.borderColor, color: service.borderColor }}
                 >
@@ -160,7 +160,7 @@ export default function Home() {
 
       {/* Why Choose Us Section */}
       <section
-        className="flex w-full flex-col items-center gap-[73px] self-stretch px-[105px] py-[65px] bg-[#1F4427]"
+        className="flex w-full flex-col items-center gap-12 md:gap-[73px] self-stretch px-6 md:px-[105px] py-12 md:py-[65px] bg-[#1F4427]"
       >
         <h2 className={cn(
           "self-stretch text-center text-[#8CC5A2] text-[28px] font-extrabold uppercase leading-normal tracking-[1.12px]",
@@ -171,7 +171,7 @@ export default function Home() {
         </h2>
 
         {/* Metrics Widget */}
-        <div className="flex flex-wrap justify-center items-start gap-[100px] self-stretch">
+        <div className="flex flex-wrap justify-center items-start gap-12 md:gap-[100px] self-stretch">
           {[
             { value: 35, desc: "ANOS NO\nMERCADO", decimals: 0 },
             { value: 15, desc: "PRÊMIOS NO\nMEJ", decimals: 0 },
@@ -203,7 +203,7 @@ export default function Home() {
       </section>
       {/* Partners Section */}
       <section
-        className="flex w-full flex-col items-center gap-[10px] self-stretch px-[57px] py-[60px] bg-[#1F4427]"
+        className="flex w-full flex-col items-center gap-[10px] self-stretch px-6 md:px-[57px] py-[60px] bg-[#1F4427]"
       >
         <h2 className={cn(
           "self-stretch text-center text-white text-[28px] font-extrabold uppercase leading-normal tracking-[1.12px]",
@@ -217,8 +217,8 @@ export default function Home() {
         <div className="relative w-full overflow-hidden h-40 md:h-56 flex items-center">
           <div className="flex w-fit items-center gap-16 md:gap-32 animate-infinite-scroll pl-[252px]">
             {[
-              "/logo-fejesp.png", "/logo-esalq.png", "/logo-nucleo-campinas.png", "/logo-brasil-junior.png", "/logo-usp.png",
-              "/logo-fejesp.png", "/logo-esalq.png", "/logo-nucleo-campinas.png", "/logo-brasil-junior.png", "/logo-usp.png" // Duplicated
+              "/logos/logo-fejesp.png", "/logos/logo-esalq.png", "/logos/logo-nucleo-campinas.png", "/logos/logo-brasil-junior.png", "/logos/logo-usp.png",
+              "/logos/logo-fejesp.png", "/logos/logo-esalq.png", "/logos/logo-nucleo-campinas.png", "/logos/logo-brasil-junior.png", "/logos/logo-usp.png" // Duplicated
             ].map((logo, idx) => (
               <div
                 key={idx}
@@ -240,7 +240,7 @@ export default function Home() {
       {/* Final Budget Section */}
       <section
         className="relative flex min-h-[500px] w-full flex-col justify-center items-center gap-12 self-stretch px-6 md:px-20 lg:px-[200px] bg-cover bg-center bg-no-repeat overflow-hidden text-center"
-        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('/orcamento-bg.png')" }}
+        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('/banners/orcamento-bg.png')" }}
       >
         <div className="flex flex-col items-center gap-4">
           <h2 className={cn(

@@ -15,7 +15,7 @@ const solutions = [
     details: ["Cadastro Ambiental Rural (CAR)", "Licenciamento de Supressão", "Regularização de APP e Reserva Legal"],
     icon: TreeDeciduous,
     color: "#F1DD8C",
-    image: "/legislacao.jpg",
+    image: "/solucoes/legislacao.jpg",
     href: "/solucoes/legislacao"
   },
   {
@@ -24,7 +24,7 @@ const solutions = [
     details: ["Projetos de Paisagismo", "Silvicultura e Plantio", "Inventário Florestal"],
     icon: Leaf,
     color: "#8CC5A2",
-    image: "/manejo.jpg",
+    image: "/solucoes/manejo.jpg",
     href: "/solucoes/manejo"
   },
   {
@@ -33,7 +33,7 @@ const solutions = [
     details: ["Relatório de Sustentabilidade", "Diagnóstico de Áreas Degradadas", "Créditos de Carbono"],
     icon: FileText,
     color: "#8CC5A2",
-    image: "/consultoria.jpg",
+    image: "/solucoes/consultoria.jpg",
     href: "/solucoes/consultoria"
   },
   {
@@ -42,7 +42,7 @@ const solutions = [
     details: ["Educação Ambiental", "Capacitação Técnica", "Palestras e Workshops"],
     icon: BookOpen,
     color: "#1C8F42",
-    image: "/ensino.jpeg",
+    image: "/solucoes/ensino.jpeg",
     href: "/solucoes/ensino"
   }
 ];
@@ -53,7 +53,7 @@ export default function SolucoesPage() {
       {/* Hero Section */}
       <section
         className="relative flex h-[500px] w-full flex-col justify-center items-center bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/solucoes-hero.jpg')" }}
+        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/banners/solucoes-hero.jpg')" }}
       >
         <div className="relative z-10 text-center px-6">
           <h1 className={cn(
@@ -152,7 +152,7 @@ export default function SolucoesPage() {
             </p>
           </div>
           <a
-            href="/portfolio-ejf.pdf"
+            href="/documentos/portfolio-ejf.pdf"
             download="Portfolio-EJF.pdf"
             target="_blank"
             rel="noopener noreferrer"

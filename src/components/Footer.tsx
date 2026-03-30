@@ -15,13 +15,13 @@ const solutions = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#1F4427] text-white self-stretch flex flex-col justify-center items-center gap-[20px] px-[58px] py-[30px]">
-      <div className="flex flex-wrap justify-center items-start gap-[100px] self-stretch">
+    <footer className="bg-[#1F4427] text-white self-stretch flex flex-col justify-center items-center gap-[20px] px-6 py-[30px] md:px-[58px]">
+      <div className="flex flex-wrap justify-center items-start gap-12 md:gap-[100px] self-stretch">
         {/* Logo */}
         <div className="flex flex-col justify-center items-center">
           <Link href="/" className="flex items-center transition-transform hover:scale-105">
             <Image
-              src="/logo.svg"
+              src="/logos/logo.svg"
               alt="EJF Logo"
               width={160}
               height={160}
