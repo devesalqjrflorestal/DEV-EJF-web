@@ -52,9 +52,17 @@ export default function SolucoesPage() {
     <main className="flex flex-col bg-[#1F4427] min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative flex h-[500px] w-full flex-col justify-center items-center bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/banners/solucoes-hero.jpg')" }}
+        className="relative flex h-[500px] w-full flex-col justify-center items-center overflow-hidden"
       >
+        <Image
+          src="/banners/solucoes-hero.jpg"
+          alt="Banner Soluções"
+          fill
+          priority
+          className="object-cover z-0"
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/60 to-black/40" />
+        
         <div className="relative z-10 text-center px-6">
           <h1 className={cn(
             "text-white font-black [font-variant:all-small-caps] tracking-[0.04em] md:tracking-[3.2px] leading-[1.1]",
@@ -88,10 +96,12 @@ export default function SolucoesPage() {
             >
               {/* Card Image Header */}
               <div className="relative h-64 w-full overflow-hidden">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1F4427] via-[#1F4427]/40 to-transparent" />
                 <div
