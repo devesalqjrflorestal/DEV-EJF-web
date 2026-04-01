@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ESALQ Júnior Florestal - Website Oficial
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19.2-blue?style=for-the-badge&logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.3-ff69b4?style=for-the-badge&logo=framer)
 
-First, run the development server:
+## 📋 Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Este é o novo website oficial da **ESALQ Júnior Florestal (EJF)**. Desenvolvido com tecnologias modernas, o site visa proporcionar uma experiência premium e informativa para clientes, parceiros e estudantes interessados em consultoria florestal e soluções ambientais sustentáveis.
+
+A EJF é uma empresa júnior reconhecida pela excelência em manejo florestal, oferecendo serviços especializados com o respaldo técnico de uma das melhores instituições de ensino agrário do país.
+
+## 🚀 Funcionalidades
+
+- **Design Responsivo & Premium**: Interface moderna e adaptável para todos os dispositivos.
+- **Páginas Institucionais**: Informações detalhadas sobre a história, missão, visão e valores da EJF.
+- **Catálogo de Soluções**: Apresentação clara e elegante dos serviços e consultorias oferecidos.
+- **Animações Fluidas**: Utilização de `framer-motion` para transições suaves e interações cativantes.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Core**: Next.js (App Router), React, TypeScript.
+- **Estilização**: Tailwind CSS v4 para um design consistente e performático.
+- **Animações**: Framer Motion.
+- **Ícones**: Lucide React.
+- **Processamento de Imagens**: Sharp (otimização nativa do Next.js).
+- **Conteúdo**: RSS-Parser para integração de feeds dinâmicos.
+
+```text
+src/
+├── app/          # Rotas e layouts principais do Next.js
+├── components/   # Componentes React reutilizáveis (Navbar, Footer, etc)
+├── lib/          # Funções utilitárias e configurações globais
+├── public/       # Ativos estáticos como logos, imagens e ícones
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido com ❤️ pela equipe da ATRIA Júnior.
