@@ -85,7 +85,7 @@ export function Footer() {
             <a href="https://www.instagram.com/esalqjrflorestal/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+            <a href="https://www.linkedin.com/company/esalq-jr-florestal/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
               <Linkedin className="h-5 w-5" />
             </a>
           </div>
