@@ -120,6 +120,7 @@ export default function ContatoPage() {
                     type="text"
                     id="name"
                     placeholder="Seu nome"
+                    required
                     className={cn(
                       "bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors",
                       montserrat.className
@@ -132,6 +133,7 @@ export default function ContatoPage() {
                     type="email"
                     id="email"
                     placeholder="exemplo@email.com"
+                    required
                     className={cn(
                       "bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors",
                       montserrat.className
@@ -146,6 +148,7 @@ export default function ContatoPage() {
                   type="text"
                   id="subject"
                   placeholder="Como podemos ajudar?"
+                  required
                   className={cn(
                     "bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors",
                     montserrat.className
@@ -157,6 +160,7 @@ export default function ContatoPage() {
                 <label htmlFor="message" className={cn("text-white/70 text-sm font-medium ml-1", montserrat.className)}>Sua Mensagem</label>
                 <textarea
                   id="message"
+                  required
                   rows={6}
                   placeholder="Descreva seu projeto ou dúvida..."
                   className={cn(
