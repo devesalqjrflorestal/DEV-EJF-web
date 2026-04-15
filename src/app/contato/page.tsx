@@ -99,7 +99,7 @@ export default function ContatoPage() {
                 <a href="https://www.instagram.com/esalqjrflorestal/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-white/5 border border-white/10 text-white hover:bg-[#F1DD8C] hover:text-[#1F4427] transition-all hover:scale-110">
                   <Instagram className="h-6 w-6" />
                 </a>
-                <a href="#" className="p-4 rounded-full bg-white/5 border border-white/10 text-white hover:bg-[#F1DD8C] hover:text-[#1F4427] transition-all hover:scale-110">
+                <a href="https://www.linkedin.com/company/esalq-jr-florestal/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-white/5 border border-white/10 text-white hover:bg-[#F1DD8C] hover:text-[#1F4427] transition-all hover:scale-110">
                   <Linkedin className="h-6 w-6" />
                 </a>
               </div>
