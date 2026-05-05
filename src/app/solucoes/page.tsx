@@ -11,8 +11,8 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 const solutions = [
   {
     title: "Legislação Ambiental",
-    description: "Assessoria completa para regularização de propriedades, licenciamento ambiental e conformidade com o Código Florestal. Garantimos que sua atividade esteja juridicamente segura e ambientalmente responsável.",
-    details: ["Cadastro Ambiental Rural (CAR)", "Licenciamento de Supressão", "Regularização de APP e Reserva Legal"],
+    description: "Soluções voltadas à regularização ambiental de propriedades rurais, garantindo conformidade com a legislação vigente. Garantimos que sua atividade esteja juridicamente segura e ambientalmente responsável.",
+    details: ["Cadastro Ambiental Rural (CAR)", "Plano de Recuperação de Áreas Degradadas (PRADA)"],
     icon: TreeDeciduous,
     color: "#F1DD8C",
     image: "/solucoes/legislacao.jpg",
@@ -20,8 +20,8 @@ const solutions = [
   },
   {
     title: "Manejo Florestal",
-    description: "Planejamento estratégico para otimização da produção florestal e paisagismo. Focamos em silvicultura de precisão e gestão sustentável de recursos para máxima rentabilidade.",
-    details: ["Projetos de Paisagismo", "Silvicultura e Plantio", "Inventário Florestal"],
+    description: "Soluções técnicas para planejamento, análise e gestão de recursos florestais, promovendo uso eficiente, segurança e sustentabilidade de áreas naturais e urbanas.",
+    details: ["Inventário Florestal", "Monitoramento Arbóreo", "Projeto de Paisagismo", "Laudo Fitossanitário"],
     icon: Leaf,
     color: "#8CC5A2",
     image: "/solucoes/manejo.jpg",
@@ -29,8 +29,8 @@ const solutions = [
   },
   {
     title: "Consultoria Florestal",
-    description: "Soluções técnicas para gestão de ESG (Ambiental, Social e Governança), relatórios de sustentabilidade e diagnóstico técnico especializado para o setor florestal.",
-    details: ["Relatório de Sustentabilidade", "Diagnóstico de Áreas Degradadas", "Créditos de Carbono"],
+    description: "Análises estratégicas e soluções personalizadas para apoiar a tomada de decisão no setor florestal, com base em dados, inovação e visão de mercado.",
+    details: ["Pesquisa de Mercado", "Relatório de Sustentabilidade"],
     icon: FileText,
     color: "#8CC5A2",
     image: "/solucoes/consultoria.jpg",

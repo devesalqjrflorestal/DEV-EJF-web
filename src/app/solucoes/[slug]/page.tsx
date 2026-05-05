@@ -10,40 +10,40 @@ const solutionsData: Record<string, any> = {
   legislacao: {
     title: "LEGISLAÇÃO AMBIENTAL",
     heroTitle: "SERVIÇOS",
-    description: "Referência em adequação e conformidade legal, a ESALQ Júnior Florestal traduz a complexidade das normas ambientais em soluções práticas para proprietários e empresas. Atuamos com rigor técnico para garantir a segurança jurídica e a sustentabilidade do seu negócio, desde o registro inicial até a recuperação completa de áreas degradadas.",
+    description: "A ESALQ Júnior Florestal atua na regularização ambiental por meio do CAR e PRADA, auxiliando proprietários rurais na adequação à legislação. Com análises técnicas e planejamento estratégico, garantimos segurança jurídica, identificação de passivos ambientais e definição de soluções para recuperação e uso sustentável da área.",
     color: "#F1DD8C",
     mainImage: "/legislacao_forest_aerial_1774739802682.png",
     services: [
-      { name: "Cadastro Ambiental Rural (CAR)", image: "/car_map_real_1774872830220.png" },
-      { name: "Planos de Restauração (PRAD)", image: "/prad_restoration_real_1774872846847.png" },
-      { name: "Licenciamento de Supressão", image: "/licensing_suppression_real_1774872861881.png" },
-      { name: "Regularização de Reserva Legal", image: "/reserva_legal_forest_real_1774872877567.png" }
+      { name: "Cadastro Ambiental Rural (CAR)", image: "/solucoes/legislacao/cadastro-ambiental-rural-car.jpg" },
+      { name: "Planos de Restauração (PRAD)", image: "/solucoes/legislacao/planos-de-restauracao-prad.jpg" },
+      { name: "Licenciamento de Supressão", image: "/solucoes/legislacao/licenciamento-de-supressao.jpg" },
+      { name: "Regularização de Reserva Legal", image: "/solucoes/legislacao/regularizacao-de-reserva-legal.jpg" }
     ]
   },
   manejo: {
     title: "MANEJO FLORESTAL",
     heroTitle: "SERVIÇOS",
-    description: "Gestão inteligente e responsável dos recursos florestais. Utilizamos tecnologias de precisão para inventário, monitoramento e planejamento, visando a máxima eficiência produtiva e a conservação dos ecossistemas. Transformamos dados técnicos em decisões estratégicas para o manejo de precisão.",
+    description: "A ESALQ Júnior Florestal oferece serviços voltados ao manejo florestal, como inventário, monitoramento arbóreo e paisagismo. A partir de análises técnicas, fornecemos dados e orientações para planejamento, conservação e valorização de áreas, garantindo funcionalidade, segurança e sustentabilidade ambiental.",
     color: "#8CC5A2",
     mainImage: "/manejo_hands_moss_1774739816081.png",
     services: [
-      { name: "Inventário Florestal", image: "/inventario_measurement_real_1774872895734.png" },
-      { name: "Monitoramento Arbóreo", image: "/monitoramento_arboreo_real_1774872912209.png" },
-      { name: "Projetos de Paisagismo", image: "/paisagismo_garden_real_1774872928701.png" },
-      { name: "Silvicultura e Plantio", image: "/silvicultura_planting_real_1774872944731.png" }
+      { name: "Inventário Florestal", image: "/solucoes/manejo/inventario-florestal.jpg" },
+      { name: "Monitoramento Arbóreo", image: "/solucoes/manejo/monitoramento-arboreo.jpg" },
+      { name: "Projetos de Paisagismo", image: "/solucoes/manejo/projeto-de-paisagismo.jpg" },
+      { name: "Silvicultura e Plantio", image: "/solucoes/manejo/silvicultura-e-plantio.jpg" }
     ]
   },
   consultoria: {
-    title: "CONSULTORIA",
+    title: "CONSULTORIA FLORESTAL",
     heroTitle: "ESTRATÉGIA",
-    description: "Visão estratégica para um mercado cada vez mais verde. Nossa consultoria conecta a excelência acadêmica com as demandas de ESG, relatórios de sustentabilidade e novas oportunidades como o mercado de carbono. Oferecemos o suporte técnico necessário para que sua marca seja protagonista na economia sustentável.",
+    description: "A consultoria da ESALQ Júnior Florestal auxilia empresas e instituições na tomada de decisões estratégicas. Por meio de pesquisas de mercado e relatórios de sustentabilidade, entregamos análises completas que identificam oportunidades, riscos e caminhos para um crescimento sustentável.",
     color: "#8CC5A2",
     mainImage: "/consultoria_wood_biomass_1774739827206.png",
     services: [
-      { name: "Relatórios ESG e Sustentabilidade", image: "/relatorio_sustentabilidade_real_1774872961058.png" },
-      { name: "Diagnóstico de Áreas Degradadas", image: "/diagnostico_areas_real_2_1774873011899.png" },
-      { name: "Créditos de Carbono", image: "/creditos_carbono_real_2_1774873029889.png" },
-      { name: "Pesquisa de Mercado Florestal", image: "/pesquisa_mercado_florestal_real_2_1774873047326.png" }
+      { name: "Relatórios ESG e Sustentabilidade", image: "/solucoes/consultoria/relatorios-esg-e-sustentabilidade.jpg" },
+      { name: "Diagnóstico de Áreas Degradadas", image: "/solucoes/consultoria/diagnostico-de-areas-degradadas.jpg" },
+      { name: "Créditos de Carbono", image: "/solucoes/consultoria/creditos-de-carbono.jpg" },
+      { name: "Pesquisa de Mercado Florestal", image: "/solucoes/consultoria/pesquisa-de-mercado-florestal.jpg" }
     ]
   },
   ensino: {
@@ -53,10 +53,10 @@ const solutionsData: Record<string, any> = {
     color: "#1C8F42",
     mainImage: "/ensino_forest_workshop_1774739838112_1774745221977.png",
     services: [
-      { name: "Educação Ambiental", image: "/educacao_ambiental_real_2_1774873063612.png" },
-      { name: "Capacitação Técnica", image: "/capacitacao_tecnica_real_2_1774873079520.png" },
-      { name: "Palestras do Setor", image: "/palestra_setorial_real_2_1774873094501.png" },
-      { name: "Workshops Práticos", image: "/workshop_pratico_real_2_1774873110926.png" }
+      { name: "Educação Ambiental", image: "/solucoes/ensino/educacao-ambiental.jpg" },
+      { name: "Capacitação Técnica", image: "/solucoes/ensino/capacitacao-tecnica.jpg" },
+      { name: "Palestras do Setor", image: "/solucoes/ensino/palestras-do-setor.jpg" },
+      { name: "Workshops Práticos", image: "/solucoes/ensino/workshops-praticos.jpg" }
     ]
   }
 };

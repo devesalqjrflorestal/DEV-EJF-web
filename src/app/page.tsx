@@ -127,7 +127,7 @@ export default function Home() {
               </div>
 
               {/* Content Container */}
-              <div className="flex flex-col items-center gap-4 flex-1 p-6 pt-2">
+              <div className="flex flex-col gap-4 flex-1 p-6 pt-2">
                 <h3 className={cn(
                   "self-stretch text-center text-white text-[20px] font-bold uppercase leading-tight tracking-wide",
                   montserrat.className
@@ -145,7 +145,7 @@ export default function Home() {
                 <Link
                   href={service.href}
                   className={cn(
-                    "mt-auto inline-flex items-center justify-center px-6 py-2.5 rounded-full border text-white text-xs font-bold transition-all hover:bg-white/10 uppercase tracking-widest",
+                    "mt-auto mx-auto inline-flex items-center justify-center px-6 py-2.5 rounded-full border text-white text-xs font-bold transition-all hover:bg-white/10 uppercase tracking-widest",
                     montserrat.className
                   )}
                   style={{ borderColor: service.borderColor }}

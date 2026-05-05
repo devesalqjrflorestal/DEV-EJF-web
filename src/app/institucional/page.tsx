@@ -114,8 +114,13 @@ export default function InstitucionalPage() {
             </p>
           </div>
 
-          <div className="relative h-[250px] lg:h-[300px] rounded-[24px] overflow-hidden shadow-xl border border-white/10">
-            <Image src="/institucional/time-esalq.png" alt="NOSSO TIME" fill className="object-cover" />
+          <div className="rounded-[24px] overflow-hidden shadow-xl border border-white/10">
+            <Image
+              src="/institucional/time-esalq.png"
+              alt="NOSSO TIME"
+              width={1200}
+              height={800}
+              className="w-full h-[250px] lg:h-[300px] object-cover" />
           </div>
         </div>
       </section>
