@@ -173,9 +173,9 @@ export default function Home() {
         {/* Metrics Widget */}
         <div className="flex flex-wrap justify-center items-start gap-12 md:gap-[100px] self-stretch">
           {[
-            { value: 35, desc: "ANOS NO\nMERCADO", decimals: 0 },
-            { value: 15, desc: "PRÊMIOS NO\nMEJ", decimals: 0 },
-            { value: 4.9, desc: "DE MÉDIA DE\nCSAT", decimals: 1 }
+            { value: 30, desc: "ANOS NO\nMERCADO", decimals: 0 },
+            { value: 10, desc: "PRÊMIOS NO\nMEJ", decimals: 0 },
+            { value: 4.8, desc: "DE MÉDIA DE\nCSAT", decimals: 1 }
           ].map((metric, idx) => (
             <div key={idx} className="flex flex-col items-center text-center gap-2">
               <Counter
