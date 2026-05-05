@@ -7,7 +7,7 @@
 @layer utilities {
   @keyframes infinite-scroll {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(-2816px); }
   }
   .animate-infinite-scroll {
     animation: infinite-scroll 40s linear infinite;
