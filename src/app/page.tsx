@@ -215,14 +215,14 @@ export default function Home() {
 
         {/* Partners Carousel (Infinite Scroll) */}
         <div className="relative w-full overflow-hidden h-40 md:h-56 flex items-center">
-          <div className="flex w-fit items-center gap-16 md:gap-32 animate-infinite-scroll pl-[252px]">
+          <div className="flex w-max items-center gap-16 md:gap-32 animate-infinite-scroll">
             {[
-              "/logos/logo-fejesp.png", "/logos/logo-esalq.png", "/logos/logo-nucleo-campinas.png", "/logos/logo-brasil-junior.png", "/logos/logo-usp.png",
-              "/logos/logo-fejesp.png", "/logos/logo-esalq.png", "/logos/logo-nucleo-campinas.png", "/logos/logo-brasil-junior.png", "/logos/logo-usp.png" // Duplicated
+              "/logos/logo-usp.png", "/logos/logo-esalq.png", "/logos/logo-nucleo-campinas.png", "/logos/logo-fejesp.png", "/logos/logo-brasil-junior.png", "/logos/logo-idesam.png", "/logos/logo-idesam-ppbio.png", "/logos/logo-amaz.png", "/logos/logo-idesam-zoma.png",
+              "/logos/logo-usp.png", "/logos/logo-esalq.png", "/logos/logo-nucleo-campinas.png", "/logos/logo-fejesp.png", "/logos/logo-brasil-junior.png", "/logos/logo-idesam.png", "/logos/logo-idesam-ppbio.png", "/logos/logo-amaz.png", "/logos/logo-idesam-zoma.png" // Duplicated
             ].map((logo, idx) => (
               <div
                 key={idx}
-                className="flex h-32 w-48 shrink-0 items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100"
+                className="flex h-32 w-48 shrink-0 items-center justify-center transition-all duration-500 hover:scale-110"
               >
                 <Image
                   src={logo}
