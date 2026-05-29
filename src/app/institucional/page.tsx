@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { motion, useAnimation, PanInfo } from "framer-motion";
+import { MVVSection } from "@/components/MVVSection";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -123,96 +124,7 @@ export default function InstitucionalPage() {
         </div>
       </section>
 
-      {/* MVV Grid Section */}
-      <section className="px-6 py-16 md:px-20 lg:px-[120px] bg-[#1F4427] border-t border-white/5">
-        <div
-          className="max-w-7xl mx-auto grid grid-cols-3 gap-x-4 gap-y-10 lg:gap-x-10 lg:gap-y-16 text-center"
-          style={{ gridTemplateRows: "repeat(3, auto)" }}
-        >
-          {/* Row 1, Col 1: Empty */}
-          <div />
-
-          {/* Row 1, Col 2: VISÃO */}
-          <div className="flex flex-col items-center gap-3">
-            <h3
-              className={cn("text-white font-bold uppercase tracking-wider", montserrat.className)}
-              style={{ fontSize: "24px", alignSelf: "stretch" }}
-            >
-              VISÃO
-            </h3>
-            <p
-              className={cn("text-white font-medium opacity-90", montserrat.className)}
-              style={{ fontSize: "18px", alignSelf: "stretch" }}
-            >
-              Ser reconhecida como uma empresa de referência no setor florestal.
-            </p>
-          </div>
-
-          {/* Row 1, Col 3: Empty */}
-          <div />
-
-          {/* Row 2, Col 1: Empty */}
-          <div />
-
-          {/* Row 2, Col 2: ROSA DOS VENTOS (O Quinto Elemento) */}
-          <div className="flex justify-center items-center">
-            <div
-              style={{
-                width: "100%",
-                maxWidth: "180px",
-                aspectRatio: "62/61",
-                transform: "rotate(5.012deg)",
-                position: "relative"
-              }}
-            >
-              <Image
-                src="/institucional/rosa-dos-ventos.svg"
-                alt="Compass Rose Icon"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Row 2, Col 3: Empty */}
-          <div />
-
-          {/* Row 3, Col 1: MISSÃO */}
-          <div className="flex flex-col items-center gap-3">
-            <h3
-              className={cn("text-white font-bold uppercase tracking-wider", montserrat.className)}
-              style={{ fontSize: "24px", alignSelf: "stretch" }}
-            >
-              MISSÃO
-            </h3>
-            <p
-              className={cn("text-white font-medium opacity-90", montserrat.className)}
-              style={{ fontSize: "18px", alignSelf: "stretch" }}
-            >
-              Explorar o espírito empreendedor na ESALQ/USP por meio de vivências que atendem às necessidades dos nossos clientes, conectando mercado e meio acadêmico.
-            </p>
-          </div>
-
-          {/* Row 3, Col 2: Empty */}
-          <div />
-
-          {/* Row 3, Col 3: VALORES */}
-          <div className="flex flex-col items-center gap-3">
-            <h3
-              className={cn("text-white font-bold uppercase tracking-wider", montserrat.className)}
-              style={{ fontSize: "24px", alignSelf: "stretch" }}
-            >
-              VALORES
-            </h3>
-            <p
-              className={cn("text-white font-medium opacity-90", montserrat.className)}
-              style={{ fontSize: "18px", alignSelf: "stretch" }}
-            >
-              Transparência, Excelência, Responsabilidade Socioambiental, Comprometimento e Orgulho EJF.
-            </p>
-          </div>
-        </div>
-      </section>
+      <MVVSection />
 
       {/* Team Carousel Section */}
       <section className="flex flex-col items-center gap-10 self-stretch px-6 py-16 bg-[#1F4427] border-t border-white/10 overflow-hidden">
