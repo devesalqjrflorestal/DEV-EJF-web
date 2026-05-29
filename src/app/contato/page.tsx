@@ -58,9 +58,14 @@ export default function ContatoPage() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>Endereço</span>
-                    <p className={cn("text-white text-lg opacity-90", montserrat.className)}>
-                      Av. Pádua Dias, 11 - Piracicaba, SP, 13418-900
-                    </p>
+                    <a
+                      href="https://maps.app.goo.gl/QGSNGTbj2AVRJesM8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-lg opacity-90 hover:underline"
+                    >
+                      Departamento de Ciências Florestais - Av. Pádua Dias, 11 - São Dimas, Piracicaba - SP, 13418-900
+                    </a>
                   </div>
                 </div>
 
@@ -71,9 +76,14 @@ export default function ContatoPage() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>Telefone</span>
-                    <p className={cn("text-white text-lg opacity-90", montserrat.className)}>
-                      (19) 3447-8622
-                    </p>
+                    <a
+                      href="https://wa.me/5519998944503"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white text-lg opacity-90 hover:underline"
+                    >
+                      (19) 99894-4503
+                    </a>
                   </div>
                 </div>
 
@@ -84,9 +94,12 @@ export default function ContatoPage() {
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>E-mail</span>
-                    <p className={cn("text-white text-lg opacity-90 break-all", montserrat.className)}>
-                      contato@esalqjrflorestal.org.br
-                    </p>
+                    <a
+                      href="mailto:tecnica@esalqjrflorestal.org.br"
+                      className="text-white text-lg opacity-90 break-all hover:underline"
+                    >
+                      tecnica@esalqjrflorestal.org.br
+                    </a>
                   </div>
                 </div>
               </div>
@@ -182,9 +195,9 @@ export default function ContatoPage() {
       </section>
 
       {/* Map Section */}
-      <section className="w-full h-[450px] grayscale hover:grayscale-0 transition-all duration-700 opacity-80 hover:opacity-100">
+      <section className="w-full h-[450px]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.077229045763!2d-47.6358364247551!3d-22.709971833774788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c6316235174093%3A0xcf957863c8789853!2sAv.%20P%C3%A1dua%20Dias%2C%2011%20-%20Piracicaba%2C%20SP%2C%2013418-900!5e0!3m2!1sen!2sbr!4v1711663200000!5m2!1sen!2sbr"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d547.1197841016688!2d-47.63002194890091!3d-22.70710090913169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c63197a3e8bc65%3A0xeb963336f3f930bf!2sESALQ%20J%C3%BAnior%20Florestal!5e0!3m2!1sen!2sbr!4v1778010130379!5m2!1sen!2sbr"
           width="100%"
           height="100%"
           style={{ border: 0 }}

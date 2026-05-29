@@ -51,12 +51,17 @@ export function Footer() {
           <h3 className={cn("text-[18px] font-medium text-white", montserrat.className)}>
             Endereço
           </h3>
-          <div className="flex gap-2">
+          <a
+            href="https://maps.app.goo.gl/8p3zVLNjX55C1xgD6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-2 opacity-80 hover:opacity-100 transition-opacity"
+          >
             <MapPin className="h-4 w-4 shrink-0 opacity-70" />
             <p className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>
-              Av. Pádua Dias, 11 - Piracicaba, SP, 13418-900
+              Departamento de Ciências Florestais - Av. Pádua Dias, 11 - São Dimas, Piracicaba - SP, 13418-900
             </p>
-          </div>
+          </a>
         </div>
 
         {/* Contato */}
@@ -65,14 +70,24 @@ export function Footer() {
             Contato
           </h3>
           <div className="flex flex-col gap-2">
-            <a href="mailto:contato@esalqjrflorestal.org.br" className="flex items-center gap-2 hover:opacity-100 transition-opacity">
+            <a
+              href="mailto:tecnica@esalqjrflorestal.org.br"
+              className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity"
+            >
               <Mail className="h-4 w-4 opacity-70" />
-              <span className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>contato@esalqjrflorestal.org.br</span>
+              <span className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>tecnica@esalqjrflorestal.org.br</span>
             </a>
-            <div className="flex items-center gap-2">
+            <a
+              href="https://wa.me/5519998944503"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity"
+            >
               <Phone className="h-4 w-4 opacity-70" />
-              <span className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>(19) 3447-8622</span>
-            </div>
+              <span className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>
+                (19) 99894-4503
+              </span>
+            </a>
           </div>
         </div>
 

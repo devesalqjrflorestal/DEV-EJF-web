@@ -10,16 +10,14 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function InstitucionalPage() {
   const membros = [
-    { name: "JOSÉ RENATO SCHMIDT DE CARVALHO", role: "PRESIDENTE", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "MANUELA FRANZ DA ROSA CARLOS", role: "VICE-PRESIDENTE", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "PATRÍCIA BARBOSA NASCIMENTO", role: "DIRETORA COMERCIAL", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "MONIQUE WOLTZENLOGEL DE OLIVEIRA GRILLO", role: "DIRETORA DE MARKETING", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "PEDRO DE ALMEIDA RIBEIRO", role: "ASSESSOR JURÍDICO-FINANCEIRO", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "MARIANA YOSHIZATO ULTRAMARI", role: "ASSESSORA COMERCIAL", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "PEDRO HENRIQUE DOS SANTOS NEVES", role: "ASSESSOR COMERCIAL", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "AMANDA MORENO DE LIMA", role: "ANALISTA DE RH", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "ISADORA ZAMPINI BELO", role: "ANALISTA DE RH", course: "ESALQ/USP", image: "/institucional/time-esalq.png" },
-    { name: "ANA GABRIELA VOLPATO", role: "ASSESSORA DE MARKETING", course: "ESALQ/USP", image: "/institucional/time-esalq.png" }
+    { name: "JOSÉ RENATO SCHMIDT DE CARVALHO", role: "DIRETOR PRESIDENTE", course: "ENGENHARIA FLORESTAL", image: "/institucional/membros/jose-renato-presidente.png" },
+    { name: "ANA GABRIELA VOLPATO", role: "DIRETORA DE MARKETING", course: "ENGENHARIA FLORESTAL", image: "/institucional/membros/ana-gabriela-direx-marketing.png" },
+    { name: "ENZO NOGUEIRA DE TOLEDO", role: "DIRETOR COMERCIAL", course: "ENGENHARIA AGRONÔMICA", image: "/institucional/membros/enzo-nogueira-direx-comercial.png" },
+    { name: "VITÓRIA ROSSI GALDINO DA SILVA", role: "ASSESSORA DE RH E CONSELHEIRA", course: "ENGENHARIA FLORESTAL", image: "/institucional/membros/vitoria-rossi-assessora-rh-conselho.png" },
+    { name: "PEDRO HENRIQUE DOS SANTOS NEVES", role: "ASSESSOR COMERCIAL", course: "ENGENHARIA FLORESTAL", image: "/institucional/membros/pedro-neves-assessor-comercial.png" },
+    { name: "CLARA SANTOS KROLL", role: "ASSESSORA DE MARKETING", course: "ENGENHARIA FLORESTAL", image: "/institucional/membros/clara-kroll-assessora-marketing.png" },
+    { name: "PEDRO DE ALMEIDA RIBEIRO", role: "ASSESSOR JURÍDICO-FINANCEIRO", course: "ENGENHARIA FLORESTAL", image: "/institucional/membros/pedro-almeida-assessor-juridico-financeiro.png" },
+    { name: "FELIPE MODOLO NUNES", role: "ASSESSOR JURÍDICO-FINANCEIRO", course: "ENGENHARIA AGRONÔMICA", image: "/institucional/membros/felipe-modolo-assessor-juridico-financeiro.png" },
   ];
 
   const controls = useAnimation();
@@ -101,8 +99,8 @@ export default function InstitucionalPage() {
           </div>
 
           <div className="relative h-[250px] lg:h-[300px] rounded-[24px] overflow-hidden shadow-xl border border-white/5">
-            <Image src="/institucional/usp-institucional.jpg" alt="USP Campus" fill className="object-cover opacity-80" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1F4427] to-transparent opacity-40" />
+            <Image src="/institucional/esalq-institucional-att.png" alt="USP Campus" fill className="object-cover opacity-80" />
+            <div className="object-cover" />
           </div>
 
           <div className="flex flex-col justify-start items-start gap-4">
@@ -116,7 +114,7 @@ export default function InstitucionalPage() {
 
           <div className="rounded-[24px] overflow-hidden shadow-xl border border-white/10">
             <Image
-              src="/institucional/time-esalq.png"
+              src="/institucional/time-esalq-att.png"
               alt="NOSSO TIME"
               width={1200}
               height={800}
@@ -229,7 +227,6 @@ export default function InstitucionalPage() {
             animate={controls}
             whileTap={{ cursor: "grabbing" }}
             onDragEnd={handleDragEnd}
-            // Adicionado dragElastic para dar um efeito tátil melhor nas bordas
             dragElastic={0.15}
             className="flex gap-[55px] py-4 px-4 w-max cursor-grab"
           >
