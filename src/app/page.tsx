@@ -248,7 +248,7 @@ export default function Home() {
             montserrat.className
           )}
             style={{ textShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)" }}>
-            🚀 Seu projeto não pode esperar!
+            Seu projeto não pode esperar!
           </h2>
 
           <p className={cn(
