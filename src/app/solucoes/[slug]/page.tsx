@@ -30,7 +30,11 @@ const solutionsData: Record<string, any> = {
       { name: "Inventário Florestal", image: "/solucoes/manejo/inventario-florestal.jpg" },
       { name: "Monitoramento Arbóreo", image: "/solucoes/manejo/monitoramento-arboreo.jpg" },
       { name: "Projetos de Paisagismo", image: "/solucoes/manejo/projeto-de-paisagismo.jpg" },
+<<<<<<< HEAD
       { name: "Recomendação de Espécies para Plantio", image: "/solucoes/manejo/recomendacao-de-especies-para-plantio.jpg" }
+=======
+      { name: "Recomendação de Espécies para Plantio", image: "/solucoes/manejo/recomendacao-de-especies-para-plantio.jpg"}
+>>>>>>> fa75f27e20f610aeeaa3ecba9193481c0dac1c55
     ]
   },
   consultoria: {
@@ -42,7 +46,6 @@ const solutionsData: Record<string, any> = {
     services: [
       { name: "Relatórios ESG e Sustentabilidade", image: "/solucoes/consultoria/relatorios-esg-e-sustentabilidade.jpg" },
       { name: "Diagnóstico de Áreas Degradadas", image: "/solucoes/consultoria/diagnostico-de-areas-degradadas.jpg" },
-      { name: "Créditos de Carbono", image: "/solucoes/consultoria/creditos-de-carbono.jpg" },
       { name: "Pesquisa de Mercado Florestal", image: "/solucoes/consultoria/pesquisa-de-mercado-florestal.jpg" }
     ]
   },
@@ -117,11 +120,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <h3 className={cn("text-white text-2xl font-bold uppercase tracking-[2px] flex items-center gap-4", montserrat.className)}>
               O QUE OFERECEMOS <div className="flex-grow h-[1px] bg-white/10" />
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:flex lg:flex-wrap lg:justify-center">
               {data.services.map((service: any, idx: number) => (
                 <div
                   key={idx}
-                  className="group relative flex flex-col gap-6 p-6 rounded-[35px] bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] transition-all duration-500 overflow-hidden"
+                  className="group relative flex flex-col gap-6 p-6 rounded-[35px] bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] transition-all duration-500 overflow-hidden lg:w-[calc(25%-24px)] lg:min-w-[220px] lg:max-w-[300px]"
                 >
                   <div className="relative h-48 w-full rounded-[25px] overflow-hidden">
                     <img
@@ -131,7 +134,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
-                  <h4 className={cn("text-white text-lg font-bold leading-snug group-hover:text-emerald-300 transition-colors", montserrat.className)}>
+                  <h4 className={cn("text-white text-lg font-bold leading-snug group-hover:text-emerald-300 transition-colors text-center", montserrat.className)}>
                     {service.name}
                   </h4>
                 </div>
