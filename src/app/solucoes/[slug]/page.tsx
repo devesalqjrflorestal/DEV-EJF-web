@@ -30,11 +30,7 @@ const solutionsData: Record<string, any> = {
       { name: "Inventário Florestal", image: "/solucoes/manejo/inventario-florestal.jpg" },
       { name: "Monitoramento Arbóreo", image: "/solucoes/manejo/monitoramento-arboreo.jpg" },
       { name: "Projetos de Paisagismo", image: "/solucoes/manejo/projeto-de-paisagismo.jpg" },
-<<<<<<< HEAD
       { name: "Recomendação de Espécies para Plantio", image: "/solucoes/manejo/recomendacao-de-especies-para-plantio.jpg" }
-=======
-      { name: "Recomendação de Espécies para Plantio", image: "/solucoes/manejo/recomendacao-de-especies-para-plantio.jpg"}
->>>>>>> fa75f27e20f610aeeaa3ecba9193481c0dac1c55
     ]
   },
   consultoria: {
@@ -185,3 +181,4 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     </main>
   );
 }
+
