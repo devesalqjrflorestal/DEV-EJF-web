@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Mail, MapPin, Phone, Instagram, Linkedin, Send } from "lucide-react";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -7,6 +8,37 @@ import { cn } from "@/lib/utils";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function ContatoPage() {
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
+async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const data = {
+    name: (form.elements.namedItem("name") as HTMLInputElement).value.trim(),
+    email: (form.elements.namedItem("email") as HTMLInputElement).value.trim(),
+    subject: (form.elements.namedItem("subject") as HTMLInputElement).value.trim(),
+    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim(),
+  };
+
+  if (!data.name || !data.email || !data.subject || !data.message) {
+    alert("Por favor, preencha todos os campos antes de enviar.");
+    return;
+  }
+
+  setLoading(true);
+
+  await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  setLoading(false);
+  setSent(true);
+}
+
   return (
     <main className="flex flex-col bg-[#1F4427] min-h-screen">
       {/* Hero Section */}
@@ -35,7 +67,7 @@ export default function ContatoPage() {
       <section className="px-6 py-12 md:px-20 md:py-20 lg:px-[122px]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-          {/* Info Column (Glassmorphism Card) */}
+          {/* Info Column */}
           <div className={cn(
             "flex flex-col gap-10 p-8 md:p-14 rounded-[37px]",
             "bg-[linear-gradient(180deg,rgba(140,197,162,0.1)_5%,rgba(204,204,204,0.04)_33%,rgba(31,68,39,0.1)_100%)]",
@@ -43,61 +75,44 @@ export default function ContatoPage() {
           )}>
             <div className="flex flex-col gap-8">
               <h2 className={cn(
-                "text-white font-bold uppercase tracking-wider",
-                "text-xl sm:text-2xl md:text-3xl lg:text-4xl",
+                "text-white font-bold uppercase tracking-wider text-xl sm:text-2xl md:text-3xl lg:text-4xl",
                 montserrat.className
               )}>
                 Informações
               </h2>
 
               <div className="flex flex-col gap-10">
-                {/* Endereço */}
                 <div className="flex items-start gap-5">
                   <div className="p-3 rounded-xl bg-white/5 text-[#F1DD8C]">
                     <MapPin className="h-6 w-6" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>Endereço</span>
-                    <a
-                      href="https://maps.app.goo.gl/QGSNGTbj2AVRJesM8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white text-lg opacity-90 hover:underline"
-                    >
+                    <a href="https://maps.app.goo.gl/QGSNGTbj2AVRJesM8" target="_blank" rel="noopener noreferrer" className="text-white text-lg opacity-90 hover:underline">
                       Departamento de Ciências Florestais - Av. Pádua Dias, 11 - São Dimas, Piracicaba - SP, 13418-900
                     </a>
                   </div>
                 </div>
 
-                {/* Telefone */}
                 <div className="flex items-start gap-5">
                   <div className="p-3 rounded-xl bg-white/5 text-[#F1DD8C]">
                     <Phone className="h-6 w-6" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>Telefone</span>
-                    <a
-                      href="https://wa.me/5519998944503"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white text-lg opacity-90 hover:underline"
-                    >
+                    <a href="https://wa.me/5519998944503" target="_blank" rel="noopener noreferrer" className="text-white text-lg opacity-90 hover:underline">
                       (19) 99894-4503
                     </a>
                   </div>
                 </div>
 
-                {/* Email */}
                 <div className="flex items-start gap-5">
                   <div className="p-3 rounded-xl bg-white/5 text-[#F1DD8C]">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>E-mail</span>
-                    <a
-                      href="mailto:tecnica@esalqjrflorestal.org.br"
-                      className="text-white text-lg opacity-90 break-all hover:underline"
-                    >
+                    <a href="mailto:tecnica@esalqjrflorestal.org.br" className="text-white text-lg opacity-90 break-all hover:underline">
                       tecnica@esalqjrflorestal.org.br
                     </a>
                   </div>
@@ -105,7 +120,6 @@ export default function ContatoPage() {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="pt-8 border-t border-white/10">
               <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest block mb-6", montserrat.className)}>Redes Sociais</span>
               <div className="flex gap-6">
@@ -125,69 +139,41 @@ export default function ContatoPage() {
               Envie sua mensagem
             </h2>
 
-            <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="name" className={cn("text-white/70 text-sm font-medium ml-1", montserrat.className)}>Nome Completo</label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Seu nome"
-                    className={cn(
-                      "bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors",
-                      montserrat.className
-                    )}
-                  />
+                  <input type="text" id="name" name="name" placeholder="Seu nome" className={cn("bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors", montserrat.className)} />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="email" className={cn("text-white/70 text-sm font-medium ml-1", montserrat.className)}>E-mail Profissional</label>
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="exemplo@email.com"
-                    className={cn(
-                      "bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors",
-                      montserrat.className
-                    )}
-                  />
+                  <input type="email" id="email" name="email" placeholder="exemplo@email.com" className={cn("bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors", montserrat.className)} />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="subject" className={cn("text-white/70 text-sm font-medium ml-1", montserrat.className)}>Assunto</label>
-                <input
-                  type="text"
-                  id="subject"
-                  placeholder="Como podemos ajudar?"
-                  className={cn(
-                    "bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors",
-                    montserrat.className
-                  )}
-                />
+                <input type="text" id="subject" name="subject" placeholder="Como podemos ajudar?" className={cn("bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors", montserrat.className)} />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="message" className={cn("text-white/70 text-sm font-medium ml-1", montserrat.className)}>Sua Mensagem</label>
-                <textarea
-                  id="message"
-                  rows={6}
-                  placeholder="Descreva seu projeto ou dúvida..."
-                  className={cn(
-                    "bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors resize-none",
-                    montserrat.className
-                  )}
-                />
+                <textarea id="message" name="message" rows={6} placeholder="Descreva seu projeto ou dúvida..." className={cn("bg-white/5 border border-white/10 rounded-2xl p-4 text-white outline-none focus:border-[#F1DD8C]/50 transition-colors resize-none", montserrat.className)} />
               </div>
 
               <button
                 type="submit"
+                disabled={loading || sent}
                 className={cn(
-                  "mt-4 flex items-center justify-center gap-3 bg-white text-[#1F4427] font-bold py-5 rounded-full hover:bg-[#F1DD8C] transition-all active:scale-[0.98] uppercase tracking-widest cursor-pointer",
+                  "mt-4 flex items-center justify-center gap-3 font-bold py-5 rounded-full transition-all active:scale-[0.98] uppercase tracking-widest cursor-pointer disabled:cursor-not-allowed",
+                  sent
+                    ? "bg-[#8CC5A2] text-[#1F4427] scale-[0.98]"
+                    : "bg-white text-[#1F4427] hover:bg-[#F1DD8C]",
                   montserrat.className
                 )}
               >
-                Enviar Mensagem
-                <Send className="h-5 w-5" />
+                {sent ? "✓ Mensagem Enviada!" : loading ? "Enviando..." : "Enviar Mensagem"}
+                {!sent && <Send className="h-5 w-5" />}
               </button>
             </form>
           </div>

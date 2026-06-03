@@ -30,7 +30,7 @@ const solutionsData: Record<string, any> = {
       { name: "Inventário Florestal", image: "/solucoes/manejo/inventario-florestal.jpg" },
       { name: "Monitoramento Arbóreo", image: "/solucoes/manejo/monitoramento-arboreo.jpg" },
       { name: "Projetos de Paisagismo", image: "/solucoes/manejo/projeto-de-paisagismo.jpg" },
-      { name: "Silvicultura e Plantio", image: "/solucoes/manejo/silvicultura-e-plantio.jpg" }
+      { name: "Recomendação de Espécies para Plantio", image: "/solucoes/manejo/recomendacao-de-especies-para-plantio.jpg" }
     ]
   },
   consultoria: {
