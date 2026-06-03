@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Mail, MapPin, Phone, Instagram, Linkedin, Send } from "lucide-react";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
+import emailjs from "@emailjs/browser";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -29,11 +30,12 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 
   setLoading(true);
 
-  await fetch("/api/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
+  await emailjs.send(
+    "service_430bpny",
+    "template_0y5yfu8",
+    data,
+    "-u4WX5bRemyLMOE4d"
+  );
 
   setLoading(false);
   setSent(true);
