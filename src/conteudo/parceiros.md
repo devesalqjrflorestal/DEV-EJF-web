@@ -7,4 +7,3 @@ IDESAM: logo-idesam.png
 IDESAM PPBio: logo-idesam-ppbio.png
 AMAZ: logo-amaz.png
 IDESAM Zoma: logo-idesam-zoma.png
-GOOGLE: logo-google.png
