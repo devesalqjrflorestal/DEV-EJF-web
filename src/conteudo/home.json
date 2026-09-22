@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "titulo": "ESALQ Júnior Florestal",
+    "subtitulo": "Desde 1991 impactando o setor com soluções florestais de qualidade.",
+    "imagemFundo": "/banners/hero-bg.png",
+    "botao": {
+      "texto": "Conheça nossos serviços",
+      "href": "/solucoes"
+    }
+  },
+  "solucoes": [
+    {
+      "titulo": "LEGISLAÇÃO",
+      "descricao": "Regularização e adequação ambiental por meio de serviços como CAR e PRADA, garantindo conformidade com a legislação vigente.",
+      "href": "/solucoes/legislacao",
+      "corDestaque": "#F1DD8C",
+      "icone": "TreeDeciduous",
+      "imagem": "/solucoes/legislacao.jpg"
+    },
+    {
+      "titulo": "MANEJO FLORESTAL",
+      "descricao": "Soluções técnicas para gestão e manejo florestal, incluindo monitoramento arbóreo, inventário florestal e projetos de paisagismo.",
+      "href": "/solucoes/manejo",
+      "corDestaque": "#8CC5A2",
+      "icone": "Leaf",
+      "imagem": "/solucoes/manejo.jpg"
+    },
+    {
+      "titulo": "CONSULTORIA",
+      "descricao": "Análises e diagnósticos estratégicos, com foco em relatórios de sustentabilidade e pesquisas de mercado no setor ambiental e florestal.",
+      "href": "/solucoes/consultoria",
+      "corDestaque": "#8CC5A2",
+      "icone": "FileText",
+      "imagem": "/solucoes/consultoria.jpg"
+    },
+    {
+      "titulo": "ENSINO",
+      "descricao": "Desenvolvimento de ações educativas e projetos de educação ambiental, promovendo conscientização e formação socioambiental.",
+      "href": "/solucoes/ensino",
+      "corDestaque": "#1C8F42",
+      "icone": "BookOpen",
+      "imagem": "/solucoes/ensino.jpeg"
+    }
+  ],
+  "metricas": {
+    "titulo": "Por que escolher a Esalq Junior Florestal?",
+    "numeros": [
+      { "valor": 30, "descricao": "ANOS NO\nMERCADO", "decimais": 0 },
+      { "valor": 10, "descricao": "PRÊMIOS NO\nMEJ", "decimais": 0 },
+      { "valor": 4.8, "descricao": "DE MÉDIA DE\nCSAT", "decimais": 1 }
+    ],
+    "texto": "A ESALQ Junior Florestal construiu sua trajetória ao longo de diversos anos de atuação no Movimento Empresa Júnior, acumulando aprendizados e amadurecimento a cada projeto realizado. Esse caminho foi reconhecido dentro do MEJ por meio de premiações que refletem protagonismo, responsabilidade e excelência na execução. Tudo isso se sustenta em um compromisso constante com quem confia no nosso trabalho, traduzido em relações transparentes e em um alto nível de satisfação dos clientes ao final de cada entrega."
+  },
+  "parceiros": {
+    "titulo": "Quem confia no nosso trabalho"
+  },
+  "orcamento": {
+    "titulo": "Seu projeto não pode esperar!",
+    "subtitulo": "Vamos construir a melhor solução para o seu caso.",
+    "imagemFundo": "/banners/orcamento-bg.png",
+    "botao": {
+      "texto": "QUERO UM ORÇAMENTO",
+      "href": "/contato"
+    }
+  }
+}

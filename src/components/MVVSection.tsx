@@ -19,7 +19,6 @@ function RosaDosVentos({ activeItem }: { activeItem: string | null }) {
   const currentAngle = useRef(5.012);
   const prevItem = useRef<string | null>(null);
 
-  // ✅ NOVO: inicia a rotação idle assim que o componente monta
   useEffect(() => {
     const startIdle = async () => {
       await controls.start({
@@ -68,14 +67,14 @@ function RosaDosVentos({ activeItem }: { activeItem: string | null }) {
 
 interface MVVItemProps {
   id: string;
-  title: string;
-  text: string;
+  titulo: string;
+  texto: string;
   isActive: boolean;
   isOther: boolean;
   onSelect: (id: string | null) => void;
 }
 
-function MVVItem({ id, title, text, isActive, isOther, onSelect }: MVVItemProps) {
+function MVVItem({ id, titulo, texto, isActive, isOther, onSelect }: MVVItemProps) {
   return (
     <motion.div
       className="flex flex-col items-center text-center gap-3 cursor-pointer select-none"
@@ -91,7 +90,7 @@ function MVVItem({ id, title, text, isActive, isOther, onSelect }: MVVItemProps)
         animate={{ color: isActive ? "#8CC5A2" : "#ffffff" }}
         transition={{ duration: 0.3 }}
       >
-        {title}
+        {titulo}
       </motion.h3>
 
       <motion.div
@@ -102,20 +101,24 @@ function MVVItem({ id, title, text, isActive, isOther, onSelect }: MVVItemProps)
       />
 
       <p className={cn("text-white font-medium opacity-90", montserrat.className)} style={{ fontSize: "17px" }}>
-        {text}
+        {texto}
       </p>
     </motion.div>
   );
 }
 
-export function MVVSection() {
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+interface MVVDataItem {
+  id: string;
+  titulo: string;
+  texto: string;
+}
 
-  const items = [
-    { id: "visao", title: "VISÃO", text: "Ser reconhecida como uma empresa de referência no setor florestal." },
-    { id: "missao", title: "MISSÃO", text: "Explorar o espírito empreendedor na ESALQ/USP por meio de vivências que atendem às necessidades dos nossos clientes, conectando mercado e meio acadêmico." },
-    { id: "valores", title: "VALORES", text: "Transparência, Excelência, Responsabilidade Socioambiental, Comprometimento e Orgulho EJF." },
-  ];
+interface MVVSectionProps {
+  itens: MVVDataItem[];
+}
+
+export function MVVSection({ itens }: MVVSectionProps) {
+  const [activeItem, setActiveItem] = useState<string | null>(null);
 
   return (
     <section className="px-6 py-16 md:px-20 lg:px-[120px] bg-[#1F4427] border-t border-white/5">
@@ -123,7 +126,7 @@ export function MVVSection() {
       {/* DESKTOP */}
       <div className="hidden lg:grid max-w-7xl mx-auto grid-cols-3 gap-x-10 gap-y-16 items-center">
         <div />
-        <MVVItem {...items[0]} isActive={activeItem === "visao"} isOther={activeItem !== null && activeItem !== "visao"} onSelect={setActiveItem} />
+        <MVVItem {...itens[0]} isActive={activeItem === itens[0].id} isOther={activeItem !== null && activeItem !== itens[0].id} onSelect={setActiveItem} />
         <div />
 
         <div />
@@ -132,9 +135,9 @@ export function MVVSection() {
         </div>
         <div />
 
-        <MVVItem {...items[1]} isActive={activeItem === "missao"} isOther={activeItem !== null && activeItem !== "missao"} onSelect={setActiveItem} />
+        <MVVItem {...itens[1]} isActive={activeItem === itens[1].id} isOther={activeItem !== null && activeItem !== itens[1].id} onSelect={setActiveItem} />
         <div />
-        <MVVItem {...items[2]} isActive={activeItem === "valores"} isOther={activeItem !== null && activeItem !== "valores"} onSelect={setActiveItem} />
+        <MVVItem {...itens[2]} isActive={activeItem === itens[2].id} isOther={activeItem !== null && activeItem !== itens[2].id} onSelect={setActiveItem} />
       </div>
 
       {/* MOBILE */}
@@ -142,7 +145,7 @@ export function MVVSection() {
         <div className="flex justify-center">
           <RosaDosVentos activeItem={activeItem} />
         </div>
-        {items.map((item) => (
+        {itens.map((item) => (
           <MVVItem
             key={item.id}
             {...item}

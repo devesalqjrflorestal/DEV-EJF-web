@@ -1,0 +1,32 @@
+{
+  "navbar": {
+    "itens": [
+      { "nome": "Início", "href": "/" },
+      { "nome": "Institucional", "href": "/institucional" },
+      { "nome": "Soluções", "href": "/solucoes" },
+      { "nome": "Contato", "href": "/contato" }
+    ]
+  },
+  "footer": {
+    "solucoes": [
+      { "nome": "Legislação", "href": "/solucoes/legislacao" },
+      { "nome": "Manejo Florestal", "href": "/solucoes/manejo" },
+      { "nome": "Consultoria", "href": "/solucoes/consultoria" },
+      { "nome": "Ensino", "href": "/solucoes/ensino" }
+    ],
+    "endereco": {
+      "texto": "Departamento de Ciências Florestais - Av. Pádua Dias, 11 - São Dimas, Piracicaba - SP, 13418-900",
+      "linkMaps": "https://maps.app.goo.gl/8p3zVLNjX55C1xgD6"
+    },
+    "contato": {
+      "email": "tecnica@esalqjrflorestal.org.br",
+      "telefone": "(19) 99894-4503",
+      "linkWhatsapp": "https://wa.me/5519998944503"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/esalqjrflorestal/",
+      "linkedin": "https://www.linkedin.com/company/esalq-jr-florestal/"
+    },
+    "copyright": "©2026 ESALQ Júnior Florestal - Todos os Direitos Reservados"
+  }
+}

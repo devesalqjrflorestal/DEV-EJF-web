@@ -5,62 +5,66 @@ import { Mail, MapPin, Phone, Instagram, Linkedin, Send } from "lucide-react";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
 import emailjs from "@emailjs/browser";
+import contatoData from "@/conteudo/contato.json";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function ContatoPage() {
+  const { hero, informacoes, formulario, mapa } = contatoData;
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
 
-async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault();
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
 
-  const form = e.currentTarget;
-  const data = {
-    name: (form.elements.namedItem("name") as HTMLInputElement).value.trim(),
-    email: (form.elements.namedItem("email") as HTMLInputElement).value.trim(),
-    subject: (form.elements.namedItem("subject") as HTMLInputElement).value.trim(),
-    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim(),
-  };
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value.trim(),
+      email: (form.elements.namedItem("email") as HTMLInputElement).value.trim(),
+      subject: (form.elements.namedItem("subject") as HTMLInputElement).value.trim(),
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value.trim(),
+    };
 
-  if (!data.name || !data.email || !data.subject || !data.message) {
-    alert("Por favor, preencha todos os campos antes de enviar.");
-    return;
+    if (!data.name || !data.email || !data.subject || !data.message) {
+      alert("Por favor, preencha todos os campos antes de enviar.");
+      return;
+    }
+
+    setLoading(true);
+
+    await emailjs.send(
+      "service_430bpny",
+      "template_0y5yfu8",
+      data,
+      "-u4WX5bRemyLMOE4d"
+    );
+
+    setLoading(false);
+    setSent(true);
   }
-
-  setLoading(true);
-
-  await emailjs.send(
-    "service_430bpny",
-    "template_0y5yfu8",
-    data,
-    "-u4WX5bRemyLMOE4d"
-  );
-
-  setLoading(false);
-  setSent(true);
-}
 
   return (
     <main className="flex flex-col bg-[#1F4427] min-h-screen">
       {/* Hero Section */}
       <section
         className="relative flex h-[300px] md:h-[400px] w-full flex-col justify-center items-center bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('/banners/contato-hero.jpg')" }}
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('${hero.imagemFundo}')` }}
       >
         <div className="relative z-10 text-center px-6">
-          <h1 className={cn(
-            "text-white text-[clamp(40px,8vw,72px)] font-extrabold uppercase tracking-[3px] leading-tight",
-            montserrat.className
-          )}
-            style={{ textShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)" }}>
-            CONTATO
+          <h1
+            className={cn(
+              "text-white text-[clamp(40px,8vw,72px)] font-extrabold uppercase tracking-[3px] leading-tight",
+              montserrat.className
+            )}
+            style={{ textShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)" }}
+          >
+            {hero.titulo}
           </h1>
           <p className={cn(
             "text-[#8CC5A2] text-[18px] md:text-[22px] font-medium uppercase tracking-[2px] mt-4",
             montserrat.className
           )}>
-            Fale com a nossa equipe
+            {hero.subtitulo}
           </p>
         </div>
       </section>
@@ -80,7 +84,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                 "text-white font-bold uppercase tracking-wider text-xl sm:text-2xl md:text-3xl lg:text-4xl",
                 montserrat.className
               )}>
-                Informações
+                {informacoes.titulo}
               </h2>
 
               <div className="flex flex-col gap-10">
@@ -90,8 +94,8 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>Endereço</span>
-                    <a href="https://maps.app.goo.gl/QGSNGTbj2AVRJesM8" target="_blank" rel="noopener noreferrer" className="text-white text-lg opacity-90 hover:underline">
-                      Departamento de Ciências Florestais - Av. Pádua Dias, 11 - São Dimas, Piracicaba - SP, 13418-900
+                    <a href={informacoes.endereco.linkMaps} target="_blank" rel="noopener noreferrer" className="text-white text-lg opacity-90 hover:underline">
+                      {informacoes.endereco.texto}
                     </a>
                   </div>
                 </div>
@@ -102,8 +106,8 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>Telefone</span>
-                    <a href="https://wa.me/5519998944503" target="_blank" rel="noopener noreferrer" className="text-white text-lg opacity-90 hover:underline">
-                      (19) 99894-4503
+                    <a href={informacoes.telefone.linkWhatsapp} target="_blank" rel="noopener noreferrer" className="text-white text-lg opacity-90 hover:underline">
+                      {informacoes.telefone.display}
                     </a>
                   </div>
                 </div>
@@ -114,8 +118,8 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                   </div>
                   <div className="flex flex-col gap-1">
                     <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest", montserrat.className)}>E-mail</span>
-                    <a href="mailto:tecnica@esalqjrflorestal.org.br" className="text-white text-lg opacity-90 break-all hover:underline">
-                      tecnica@esalqjrflorestal.org.br
+                    <a href={`mailto:${informacoes.email}`} className="text-white text-lg opacity-90 break-all hover:underline">
+                      {informacoes.email}
                     </a>
                   </div>
                 </div>
@@ -125,10 +129,10 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
             <div className="pt-8 border-t border-white/10">
               <span className={cn("text-[#8CC5A2] text-sm font-bold uppercase tracking-widest block mb-6", montserrat.className)}>Redes Sociais</span>
               <div className="flex gap-6">
-                <a href="https://www.instagram.com/esalqjrflorestal/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-white/5 border border-white/10 text-white hover:bg-[#F1DD8C] hover:text-[#1F4427] transition-all hover:scale-110">
+                <a href={informacoes.social.instagram} target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-white/5 border border-white/10 text-white hover:bg-[#F1DD8C] hover:text-[#1F4427] transition-all hover:scale-110">
                   <Instagram className="h-6 w-6" />
                 </a>
-                <a href="https://www.linkedin.com/company/esalq-jr-florestal/" target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-white/5 border border-white/10 text-white hover:bg-[#F1DD8C] hover:text-[#1F4427] transition-all hover:scale-110">
+                <a href={informacoes.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-4 rounded-full bg-white/5 border border-white/10 text-white hover:bg-[#F1DD8C] hover:text-[#1F4427] transition-all hover:scale-110">
                   <Linkedin className="h-6 w-6" />
                 </a>
               </div>
@@ -138,7 +142,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
           {/* Form Column */}
           <div className="flex flex-col gap-10 lg:pl-8">
             <h2 className={cn("text-white text-3xl font-bold uppercase tracking-wider", montserrat.className)}>
-              Envie sua mensagem
+              {formulario.titulo}
             </h2>
 
             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
@@ -174,7 +178,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
                   montserrat.className
                 )}
               >
-                {sent ? "✓ Mensagem Enviada!" : loading ? "Enviando..." : "Enviar Mensagem"}
+                {sent ? formulario.textoEnviado : loading ? formulario.textoEnviando : formulario.textoEnviar}
                 {!sent && <Send className="h-5 w-5" />}
               </button>
             </form>
@@ -185,7 +189,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
       {/* Map Section */}
       <section className="w-full h-[450px]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d547.1197841016688!2d-47.63002194890091!3d-22.70710090913169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c63197a3e8bc65%3A0xeb963336f3f930bf!2sESALQ%20J%C3%BAnior%20Florestal!5e0!3m2!1sen!2sbr!4v1778010130379!5m2!1sen!2sbr"
+          src={mapa.embedUrl}
           width="100%"
           height="100%"
           style={{ border: 0 }}

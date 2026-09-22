@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "titulo": "NOSSAS SOLUÇÕES",
+    "subtitulo": "Excelência técnica da USP para o seu negócio",
+    "imagem": "/banners/solucoes-hero.jpg"
+  },
+  "catalogo": [
+    {
+      "titulo": "Legislação Ambiental",
+      "descricao": "Soluções voltadas à regularização ambiental de propriedades rurais, garantindo conformidade com a legislação vigente. Garantimos que sua atividade esteja juridicamente segura e ambientalmente responsável.",
+      "servicos": [
+        "Cadastro Ambiental Rural (CAR)",
+        "Plano de Recuperação de Áreas Degradadas (PRADA)"
+      ],
+      "icone": "TreeDeciduous",
+      "corDestaque": "#F1DD8C",
+      "imagem": "/solucoes/legislacao.jpg",
+      "href": "/solucoes/legislacao"
+    },
+    {
+      "titulo": "Manejo Florestal",
+      "descricao": "Soluções técnicas para planejamento, análise e gestão de recursos florestais, promovendo uso eficiente, segurança e sustentabilidade de áreas naturais e urbanas.",
+      "servicos": [
+        "Inventário Florestal",
+        "Monitoramento Arbóreo",
+        "Projeto de Paisagismo",
+        "Laudo Fitossanitário"
+      ],
+      "icone": "Leaf",
+      "corDestaque": "#8CC5A2",
+      "imagem": "/solucoes/manejo.jpg",
+      "href": "/solucoes/manejo"
+    },
+    {
+      "titulo": "Consultoria Florestal",
+      "descricao": "Análises estratégicas e soluções personalizadas para apoiar a tomada de decisão no setor florestal, com base em dados, inovação e visão de mercado.",
+      "servicos": [
+        "Pesquisa de Mercado",
+        "Relatório de Sustentabilidade"
+      ],
+      "icone": "FileText",
+      "corDestaque": "#8CC5A2",
+      "imagem": "/solucoes/consultoria.jpg",
+      "href": "/solucoes/consultoria"
+    },
+    {
+      "titulo": "Ensino e Acadêmico",
+      "descricao": "Difusão de conhecimento técnico através de cursos, workshops e projetos de educação ambiental. Conectamos a excelência da USP com as necessidades práticas do mercado.",
+      "servicos": [
+        "Educação Ambiental",
+        "Capacitação Técnica",
+        "Palestras e Workshops"
+      ],
+      "icone": "BookOpen",
+      "corDestaque": "#1C8F42",
+      "imagem": "/solucoes/ensino.jpeg",
+      "href": "/solucoes/ensino"
+    }
+  ],
+  "portfolio": {
+    "titulo": "Confira nosso Portfólio Geral",
+    "descricao": "Para informações detalhadas sobre todos os nossos projetos e equipe técnica, faça download do nosso material completo.",
+    "botao": {
+      "texto": "Baixar PDF (9MB)",
+      "arquivo": "/documentos/portfolio-ejf.pdf",
+      "nomeDownload": "Portfolio-EJF.pdf"
+    }
+  },
+  "cta": {
+    "titulo": "Pronto para elevar o nível do seu projeto?",
+    "botao": {
+      "texto": "Falar com um Consultor",
+      "href": "/contato"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slugs": {
+    "legislacao": {
+      "titulo": "LEGISLAÇÃO AMBIENTAL",
+      "descricao": "A ESALQ Júnior Florestal atua na regularização ambiental por meio do CAR e PRADA, auxiliando proprietários rurais na adequação à legislação. Com análises técnicas e planejamento estratégico, garantimos segurança jurídica, identificação de passivos ambientais e definição de soluções para recuperação e uso sustentável da área.",
+      "corDestaque": "#F1DD8C",
+      "imagemPrincipal": "/legislacao_forest_aerial_1774739802682.png",
+      "servicos": [
+        { "nome": "Cadastro Ambiental Rural (CAR)", "imagem": "/solucoes/legislacao/cadastro-ambiental-rural-car.jpg" },
+        { "nome": "Planos de Restauração (PRAD)", "imagem": "/solucoes/legislacao/planos-de-restauracao-prad.jpg" },
+        { "nome": "Licenciamento de Supressão", "imagem": "/solucoes/legislacao/licenciamento-de-supressao.jpg" },
+        { "nome": "Regularização de Reserva Legal", "imagem": "/solucoes/legislacao/regularizacao-de-reserva-legal.jpg" }
+      ]
+    },
+    "manejo": {
+      "titulo": "MANEJO FLORESTAL",
+      "descricao": "A ESALQ Júnior Florestal oferece serviços voltados ao manejo florestal, como inventário, monitoramento arbóreo e paisagismo. A partir de análises técnicas, fornecemos dados e orientações para planejamento, conservação e valorização de áreas, garantindo funcionalidade, segurança e sustentabilidade ambiental.",
+      "corDestaque": "#8CC5A2",
+      "imagemPrincipal": "/manejo_hands_moss_1774739816081.png",
+      "servicos": [
+        { "nome": "Inventário Florestal", "imagem": "/solucoes/manejo/inventario-florestal.jpg" },
+        { "nome": "Monitoramento Arbóreo", "imagem": "/solucoes/manejo/monitoramento-arboreo.jpg" },
+        { "nome": "Projetos de Paisagismo", "imagem": "/solucoes/manejo/projeto-de-paisagismo.jpg" },
+        { "nome": "Recomendação de Espécies para Plantio", "imagem": "/solucoes/manejo/recomendacao-de-especies-para-plantio.jpg" }
+      ]
+    },
+    "consultoria": {
+      "titulo": "CONSULTORIA FLORESTAL",
+      "descricao": "A consultoria da ESALQ Júnior Florestal auxilia empresas e instituições na tomada de decisões estratégicas. Por meio de pesquisas de mercado e relatórios de sustentabilidade, entregamos análises completas que identificam oportunidades, riscos e caminhos para um crescimento sustentável.",
+      "corDestaque": "#8CC5A2",
+      "imagemPrincipal": "/consultoria_wood_biomass_1774739827206.png",
+      "servicos": [
+        { "nome": "Relatórios ESG e Sustentabilidade", "imagem": "/solucoes/consultoria/relatorios-esg-e-sustentabilidade.jpg" },
+        { "nome": "Diagnóstico de Áreas Degradadas", "imagem": "/solucoes/consultoria/diagnostico-de-areas-degradadas.jpg" },
+        { "nome": "Pesquisa de Mercado Florestal", "imagem": "/solucoes/consultoria/pesquisa-de-mercado-florestal.jpg" }
+      ]
+    },
+    "ensino": {
+      "titulo": "ENSINO",
+      "descricao": "Acreditamos na educação como o principal motor da preservação. O pilar de ensino da ESALQ Júnior Florestal democratiza o conhecimento técnico de ponta através de metodologias ativas, capacitações e workshops que conectam as pessoas à natureza e às melhores práticas do setor.",
+      "corDestaque": "#1C8F42",
+      "imagemPrincipal": "/ensino_forest_workshop_1774739838112_1774745221977.png",
+      "servicos": [
+        { "nome": "Educação Ambiental", "imagem": "/solucoes/ensino/educacao-ambiental.jpg" },
+        { "nome": "Capacitação Técnica", "imagem": "/solucoes/ensino/capacitacao-tecnica.jpg" },
+        { "nome": "Palestras do Setor", "imagem": "/solucoes/ensino/palestras-do-setor.jpg" },
+        { "nome": "Workshops Práticos", "imagem": "/solucoes/ensino/workshops-praticos.jpg" }
+      ]
+    }
+  },
+  "cta": {
+    "titulo": "Ficou interessado?",
+    "subtitulo": "Construa seu futuro conosco.",
+    "botao": {
+      "texto": "SOLICITAR ORÇAMENTO",
+      "href": "/contato"
+    }
+  }
+}

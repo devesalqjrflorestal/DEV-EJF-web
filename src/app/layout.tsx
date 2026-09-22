@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import globalData from "@/conteudo/global.json";
 
 const inter = Inter({ subsets: ["latin"] });
-const montserrat = Montserrat({ 
+const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
 });
@@ -16,9 +19,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,11 +27,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth">
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
-        <Navbar />
+        <Navbar itens={globalData.navbar.itens} />
         <div className="flex-grow pt-[76px]">
           {children}
         </div>
-        <Footer />
+        <Footer data={globalData.footer} />
       </body>
     </html>
   );

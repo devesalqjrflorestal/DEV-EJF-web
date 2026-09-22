@@ -6,14 +6,19 @@ import { cn } from "@/lib/utils";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-const solutions = [
-  { name: "Legislação", href: "/solucoes/legislacao" },
-  { name: "Manejo Florestal", href: "/solucoes/manejo" },
-  { name: "Consultoria", href: "/solucoes/consultoria" },
-  { name: "Ensino", href: "/solucoes/ensino" },
-];
+interface FooterData {
+  solucoes: { nome: string; href: string }[];
+  endereco: { texto: string; linkMaps: string };
+  contato: { email: string; telefone: string; linkWhatsapp: string };
+  social: { instagram: string; linkedin: string };
+  copyright: string;
+}
 
-export function Footer() {
+interface FooterProps {
+  data: FooterData;
+}
+
+export function Footer({ data }: FooterProps) {
   return (
     <footer className="bg-[#1F4427] text-white self-stretch flex flex-col justify-center items-center gap-[20px] px-6 py-[30px] md:px-[58px]">
       <div className="flex flex-wrap justify-center items-start gap-12 md:gap-[100px] self-stretch">
@@ -36,10 +41,10 @@ export function Footer() {
             Soluções
           </h3>
           <ul className="flex flex-col gap-2">
-            {solutions.map((item) => (
-              <li key={item.name}>
+            {data.solucoes.map((item) => (
+              <li key={item.nome}>
                 <Link href={item.href} className={cn("text-[14px] font-normal opacity-80 hover:opacity-100 transition-opacity", montserrat.className)}>
-                  {item.name}
+                  {item.nome}
                 </Link>
               </li>
             ))}
@@ -52,14 +57,14 @@ export function Footer() {
             Endereço
           </h3>
           <a
-            href="https://maps.app.goo.gl/8p3zVLNjX55C1xgD6"
+            href={data.endereco.linkMaps}
             target="_blank"
             rel="noopener noreferrer"
             className="flex gap-2 opacity-80 hover:opacity-100 transition-opacity"
           >
             <MapPin className="h-4 w-4 shrink-0 opacity-70" />
             <p className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>
-              Departamento de Ciências Florestais - Av. Pádua Dias, 11 - São Dimas, Piracicaba - SP, 13418-900
+              {data.endereco.texto}
             </p>
           </a>
         </div>
@@ -71,21 +76,21 @@ export function Footer() {
           </h3>
           <div className="flex flex-col gap-2">
             <a
-              href="mailto:tecnica@esalqjrflorestal.org.br"
+              href={`mailto:${data.contato.email}`}
               className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity"
             >
               <Mail className="h-4 w-4 opacity-70" />
-              <span className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>tecnica@esalqjrflorestal.org.br</span>
+              <span className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>{data.contato.email}</span>
             </a>
             <a
-              href="https://wa.me/5519998944503"
+              href={data.contato.linkWhatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity"
             >
               <Phone className="h-4 w-4 opacity-70" />
               <span className={cn("text-[14px] font-normal opacity-80", montserrat.className)}>
-                (19) 99894-4503
+                {data.contato.telefone}
               </span>
             </a>
           </div>
@@ -97,10 +102,10 @@ export function Footer() {
             Social
           </h3>
           <div className="flex gap-4">
-            <a href="https://www.instagram.com/esalqjrflorestal/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+            <a href={data.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://www.linkedin.com/company/esalq-jr-florestal/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+            <a href={data.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
               <Linkedin className="h-5 w-5" />
             </a>
           </div>
@@ -114,7 +119,7 @@ export function Footer() {
           "flex-1 text-center text-white text-[14px] font-medium opacity-75 leading-normal",
           montserrat.className
         )}>
-          ©2026 ESALQ Júnior Florestal - Todos os Direitos Reservados
+          {data.copyright}
         </p>
       </div>
     </footer>

@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "titulo": "CONTATO",
+    "subtitulo": "Fale com a nossa equipe",
+    "imagemFundo": "/banners/contato-hero.jpg"
+  },
+  "informacoes": {
+    "titulo": "Informações",
+    "endereco": {
+      "texto": "Departamento de Ciências Florestais - Av. Pádua Dias, 11 - São Dimas, Piracicaba - SP, 13418-900",
+      "linkMaps": "https://maps.app.goo.gl/QGSNGTbj2AVRJesM8"
+    },
+    "telefone": {
+      "display": "(19) 99894-4503",
+      "linkWhatsapp": "https://wa.me/5519998944503"
+    },
+    "email": "tecnica@esalqjrflorestal.org.br",
+    "social": {
+      "instagram": "https://www.instagram.com/esalqjrflorestal/",
+      "linkedin": "https://www.linkedin.com/company/esalq-jr-florestal/"
+    }
+  },
+  "formulario": {
+    "titulo": "Envie sua mensagem",
+    "textoEnviar": "Enviar Mensagem",
+    "textoEnviando": "Enviando...",
+    "textoEnviado": "✓ Mensagem Enviada!"
+  },
+  "mapa": {
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d547.1197841016688!2d-47.63002194890091!3d-22.70710090913169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c63197a3e8bc65%3A0xeb963336f3f930bf!2sESALQ%20J%C3%BAnior%20Florestal!5e0!3m2!1sen!2sbr!4v1778010130379!5m2!1sen!2sbr"
+  }
+}

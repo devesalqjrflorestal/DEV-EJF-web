@@ -9,14 +9,16 @@ import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-const navigation = [
-  { name: "Início", href: "/" },
-  { name: "Institucional", href: "/institucional" },
-  { name: "Soluções", href: "/solucoes" },
-  { name: "Contato", href: "/contato" },
-];
+interface NavItem {
+  nome: string;
+  href: string;
+}
 
-export function Navbar() {
+interface NavbarProps {
+  itens: NavItem[];
+}
+
+export function Navbar({ itens }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -37,16 +39,16 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map((item) => (
+              {itens.map((item) => (
                 <Link
-                  key={item.name}
+                  key={item.nome}
                   href={item.href}
                   className={cn(
                     "px-1 py-2 text-[18px] font-normal text-white transition-colors hover:opacity-80 text-center tracking-[0.72px] uppercase",
                     montserrat.className
                   )}
                 >
-                  {item.name}
+                  {item.nome}
                 </Link>
               ))}
             </div>
@@ -66,9 +68,9 @@ export function Navbar() {
       {/* Mobile menu */}
       <div className={cn("md:hidden", isOpen ? "block" : "hidden")}>
         <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 border-t bg-[#1F4427]">
-          {navigation.map((item) => (
+          {itens.map((item) => (
             <Link
-              key={item.name}
+              key={item.nome}
               href={item.href}
               onClick={() => setIsOpen(false)}
               className={cn(
@@ -76,7 +78,7 @@ export function Navbar() {
                 montserrat.className
               )}
             >
-              {item.name}
+              {item.nome}
             </Link>
           ))}
         </div>

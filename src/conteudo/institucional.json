@@ -1,0 +1,32 @@
+{
+  "quemSomos": {
+    "titulo": "QUEM SOMOS?",
+    "subtitulo": "Especialistas em projetos florestais, consultoria e monitoramento arbóreo:",
+    "imagem1": "/institucional/esalq-institucional-att.png",
+    "imagem1Alt": "USP Campus",
+    "paragrafo1": "Fundada em 23 de outubro de 1991, a ESALQ Júnior Florestal é formada por estudantes de graduação da Escola Superior de Agricultura \"Luiz de Queiroz\" (ESALQ), campus da USP localizado em Piracicaba - SP, sob orientação do Professor Doutor Silvio Frosini de Barros Ferraz.",
+    "paragrafo2": "Atuamos na área florestal, impactando o mercado, trazendo as melhores soluções aos nossos clientes através de projetos realizados e concluídos com excelência, além de capacitar nossos membros preparando-os para o mercado de trabalho.",
+    "imagem2": "/institucional/time-esalq-att.png",
+    "imagem2Alt": "NOSSO TIME"
+  },
+  "mvv": [
+    {
+      "id": "visao",
+      "titulo": "VISÃO",
+      "texto": "Ser reconhecida como uma empresa de referência no setor florestal."
+    },
+    {
+      "id": "missao",
+      "titulo": "MISSÃO",
+      "texto": "Explorar o espírito empreendedor na ESALQ/USP por meio de vivências que atendem às necessidades dos nossos clientes, conectando mercado e meio acadêmico."
+    },
+    {
+      "id": "valores",
+      "titulo": "VALORES",
+      "texto": "Transparência, Excelência, Responsabilidade Socioambiental, Comprometimento e Orgulho EJF."
+    }
+  ],
+  "time": {
+    "titulo": "Conheça o nosso time"
+  }
+}
