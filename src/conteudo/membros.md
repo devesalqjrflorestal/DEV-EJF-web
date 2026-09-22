@@ -37,3 +37,8 @@ Nome: FELIPE MODOLO NUNES
 Cargo: ASSESSOR JURÍDICO-FINANCEIRO
 Curso: ENGENHARIA AGRONÔMICA
 Foto: felipe-modolo-assessor-juridico-financeiro.png
+---
+Nome: RICHARD MILLER
+Cargo: ASSESSOR
+Curso: ENGENHARIA AGRONÔMICA
+Foto: richard-perfil-teste.png
